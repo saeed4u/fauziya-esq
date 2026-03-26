@@ -34,7 +34,7 @@ async function submitConsultation(
 ): Promise<State> {
   try {
     const res = await fetch(
-      "https://narnia-farms.com/api/v1/fauzy/book-consultation",
+      "https://api.narnia-farms.com/api/v1/fauzy/book-consultation",
       {
         method: "POST",
         headers: {
