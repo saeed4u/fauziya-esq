@@ -33,10 +33,12 @@ export default function Nav() {
 
       setActiveSection(current)
 
-      // Update URL hash without pushing to history
+      // Update URL hash without pushing to history (only when changed)
       const hash = current ? `#${current}` : ''
       const newUrl = window.location.pathname + hash
-      window.history.replaceState(null, '', newUrl)
+      if (window.location.pathname + (window.location.hash || '') !== newUrl) {
+        window.history.replaceState(null, '', newUrl)
+      }
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })

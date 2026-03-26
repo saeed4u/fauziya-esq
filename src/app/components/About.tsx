@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion, Variants } from 'framer-motion'
 
 const ease: [number, number, number, number] = [0.16, 1, 0.3, 1]
@@ -43,6 +44,23 @@ export default function About() {
 
         {/* Right: content column */}
         <div className="md:col-span-9 space-y-14">
+          {/* Portrait */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-80px' }}
+            className="relative w-full aspect-[3/4] max-w-sm overflow-hidden"
+          >
+            <Image
+              src="/fauziya.jpg"
+              alt="Fauziya Tijjani"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'top' }}
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          </motion.div>
+
           {/* Bio */}
           <motion.div
             variants={fadeUp}

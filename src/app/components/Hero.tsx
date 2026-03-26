@@ -109,7 +109,7 @@ export default function Hero() {
           className="relative aspect-[3/4] w-full max-w-sm mx-auto md:mx-0 md:ml-auto overflow-hidden"
         >
           <Image
-            src="/fauziya.jpg"
+            src="/main.jpg"
             alt="Fauziya Tijjani Esq"
             fill
             className="object-cover object-top grayscale-[20%]"
